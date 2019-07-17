@@ -1,0 +1,52 @@
+{
+  "name": "hni-cover",
+  "version": "2.0.0",
+  "description": "Template for HNI covers",
+  "author": "Thomas Boland <thomas@studiomoniker.com> (https://studiomoniker.com)",
+  "private": true,
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "package": "npm run build && cd dist && zip -r -X \"Cover-$(echo $npm_package_name)-$(date +%s).zip\" * && mv Cover-*.zip ../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studiomoniker/hni-boilerplate"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "autoprefixer": "^9.5.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^2.1.1",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "postcss-loader": "^3.0.0",
+    "preload-webpack-plugin": "^3.0.0-beta.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {}
+}
