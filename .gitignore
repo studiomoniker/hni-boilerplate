@@ -3,7 +3,6 @@ dist/
 Cover.zip
 /.vscode
 
-
 # --------------------
 # OSX Files
 # --------------------
@@ -14,3 +13,4 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
+Cover*.zip
