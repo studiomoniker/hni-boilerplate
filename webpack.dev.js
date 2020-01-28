@@ -8,4 +8,8 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   plugins: [new CopyPlugin([{ from: './iframe-test', to: 'iframe-test' }])],
+  devServer: {
+    disableHostCheck: true,
+    host: '0.0.0.0'
+  },
 });
